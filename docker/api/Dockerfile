@@ -1,5 +1,5 @@
 FROM node:14-alpine
-LABEL name "Together Diary API"
+LABEL name "PROJECT_NAME API"
 LABEL version "1.0.0"
 
 WORKDIR /usr/tdAPI
