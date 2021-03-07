@@ -2,14 +2,13 @@
 <h1> Service Monorepo Template</h1>
   <h4>
     A template for a monorepo layout consisting of services and packages.
-  </h3>
-
+  </h4>
   <p align="center">
     <h3>
       <strong>
         <a href="#">Explore the docs »</a>
       </strong>
-    </h2>
+    </h3>
   </p>  
 
 <!--
@@ -23,17 +22,17 @@
 -->
 </div>
 
-# Packages & Services
+## Packages & Services
 
 `PROJECT_NAME` is cut up into various packages and services detailed below:
 
-## Packages
+### Packages
 - `@service-monorepo-template/template-lib` - Description of package
 
-## Services
+### Services
 - `@service-monorepo-template/api` - Description of API service
 
-# Contributing
+## Contributing
 We make use of [`PNPM`](https://pnpm.js.org/) to manage our monorepo setup. It is expected that you have an up-to-date version of it. 
 
 Please ensure you run `pnpm run lint` and `pnpm run build` in the root before pushing your commits.
