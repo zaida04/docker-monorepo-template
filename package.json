@@ -1,0 +1,90 @@
+{
+  "name": "@service-monorepo-template/main",
+  "version": "0.0.0",
+  "description": "Main overarching repo for all the service-monorepo-template services and packages",
+  "main": "null",
+  "private": true,
+  "scripts": {
+    "start:bot": "npm run build && node ./src/bot/dist/index.js --trace-warnings",
+    "build": "pnpm recursive run build --filter @service-monorepo-template/*",
+    "preinstall": "npx only-allow pnpm",
+    "knex:init": "knex migrate:latest production",
+    "lint": "npx eslint packages/ services/",
+    "lint:fix": "npx eslint packages/ services/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaida04/service-monorepo-template.git"
+  },
+  "author": "Zaid \"Nico\"",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zaida04/service-monorepo-template/issues"
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "printWidth": 120,
+    "tabWidth": 4,
+    "endOfLine": "auto"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-angular": "^11.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.16.0",
+    "eslint-config-marine": "^7.2.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "husky": "^4.3.0",
+    "knex": "^0.21.18",
+    "lint-staged": "^10.4.2",
+    "nodemon": "^2.0.6",
+    "pg": "^8.5.1",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "build": "pnpm run build",
+      "pre-commit": "npx lint-staged",
+      "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "pnpm run lint:fix"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-angular"
+    ],
+    "rules": {
+      "scope-case": [
+        2,
+        "always",
+        "pascal-case"
+      ],
+      "type-enum": [
+        2,
+        "always",
+        [
+          "chore",
+          "build",
+          "ci",
+          "docs",
+          "feat",
+          "fix",
+          "perf",
+          "refactor",
+          "revert",
+          "style",
+          "test"
+        ]
+      ]
+    }
+  },
+  "homepage": "https://github.com/zaida04/service-monorepo-template#readme"
+}

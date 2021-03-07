@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  api:
+    restart: unless-stopped
+    labels:
+      live.nic0.description: "API Service"
+    depends_on: 
+      - pgdb
+  bot:
+    restart: unless-stopped
+    labels: 
+      live.nic0.description: "Discord bot service"
+    depends_on: 
+      - rabbitmq
+      - gateway
+      - api
+  pgdb:
+    image: postgres:12-alpine
+    labels:
+      live.nic0.description: "Postgres Database"
+    expose:
+      - '5432'
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    expose:
+      - '4369'
+      - '5671'
+      - '5672'
+      - '25672'
+      - '15671'
+      - '15672'
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'rabbitmq-diagnostics', '-q', 'ping']
+      interval: 60s
+      timeout: 5s
+  gateway:
+    image: cordislib/gateway
+    restart: unless-stopped
+    depends_on: 
+      - rabbitmq

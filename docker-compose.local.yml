@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./docker/api/Dockerfile
+    expose:
+      - '3456'
+  bot:
+    build:
+      context: .
+      dockerfile: ./docker/bot/Dockerfile

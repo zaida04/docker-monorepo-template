@@ -1,0 +1,9 @@
+node_modules/
+dist/
+types/
+.vscode/
+
+*.sqlite3
+*.env
+knexfile.js
+docker-compose.config.yml

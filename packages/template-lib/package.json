@@ -1,0 +1,26 @@
+{
+  "name": "@service-monorepo-template/template-lib",
+  "version": "1.0.0",
+  "description": "Template library for monorepo setup",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "typescript": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.31"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaida04/service-monorepo-template.git"
+  },
+  "author": "Zaid \"Nico\"",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zaida04/service-monorepo-templateissues"
+  },
+  "homepage": "https://github.com/zaida04/service-monorepo-template#readme"
+}

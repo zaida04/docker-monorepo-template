@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  api:
+    image: zaid450/together_diary_api
+    env_file:
+      - ./docker/api/api.env
+  bot:
+    image: zaid450/together_diary_discord_bot
+    env_file:
+      - ./docker/bot/bot.env
+  pgdb:
+    env_file:
+      - ./docker/postgres/db.env
+  gateway:
+    env_file: 
+      - ./docker/gateway/gateway.env

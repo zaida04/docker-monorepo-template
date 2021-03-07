@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  api:
+    environment: 
+      PORT: "3456"
+      BOT_API_URL: "http://localhost:2345"
+  bot:
+    environment:
+      PG_DB: "main"
+      PG_USER: "main_user"
+      PG_PASS: "main_pass"
+      CORDIS_AMQP_HOST: "amqp://rabbitmq:5672"
+      DISCORD_TOKEN: ""
+      BOT_API_PORT: "2345"
+  pgdb:
+    environment:
+      POSTGRES_DB: "main"
+      POSTGRES_USER: "main_user"
+      POSTGRES_PASSWORD: "main_pass"
+  gateway:
+    environment:
+      CORDIS_AMQP_HOST: "amqp://rabbitmq:5672"
+      CORIS_DEBUG: false,
+      CORDIS_AUTH: ""
