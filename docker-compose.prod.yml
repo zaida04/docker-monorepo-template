@@ -2,11 +2,11 @@ version: "3"
 
 services:
   api:
-    image: zaid450/together_diary_api
+    image: zaid450/service_monorepo_template
     env_file:
       - ./docker/api/api.env
   bot:
-    image: zaid450/together_diary_discord_bot
+    image: zaid450/service_monorepo_template
     env_file:
       - ./docker/bot/bot.env
   pgdb:
