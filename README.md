@@ -45,4 +45,4 @@ If all checks out, [Submit a Pull Request](https://github.com/zaida04/service-mo
 
 © 2020, [Zaida04](https://github.com/zaida04). All rights reserved.
 
-> service-monorepo-template is licensed under [Apache 2.0](https://github.com/zaida04/service-monorepo-template/blob/master/LICENSE)
+> service-monorepo-template is licensed under the [MIT](https://github.com/zaida04/service-monorepo-template/blob/master/LICENSE) license
