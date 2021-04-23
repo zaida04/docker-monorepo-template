@@ -1,5 +1,5 @@
 <div align="center">
-<h1> Service Docker Template</h1>
+<h1> Docker Monorepo Template</h1>
   <h4>
     A template for a monorepo layout consisting of dockerized applications and packages.
   </h4>
@@ -37,9 +37,9 @@ We make use of [`PNPM`](https://pnpm.js.org/) to manage our monorepo setup. It i
 
 Please ensure you run `pnpm run lint` and `pnpm run build` in the root before pushing your commits.
 
-Please ensure that you follow our [Code Of Conduct](https://github.com/zaida04/service-monorepo-template/blob/master/.github/CODE_OF_CONDUCT.md).
+Please ensure that you follow our [Code Of Conduct](https://github.com/zaida04/docker-monorepo-template/blob/master/.github/CODE_OF_CONDUCT.md).
 
-If all checks out, [Submit a Pull Request](https://github.com/zaida04/service-monorepo-template/compare)
+If all checks out, [Submit a Pull Request](https://github.com/zaida04/docker-monorepo-template/compare)
 
 # LICENSING
 
