@@ -1,7 +1,7 @@
 <div align="center">
-<h1> Service Monorepo Template</h1>
+<h1> Service Docker Template</h1>
   <h4>
-    A template for a monorepo layout consisting of services and packages.
+    A template for a monorepo layout consisting of dockerized applications and packages.
   </h4>
   <p align="center">
     <h3>
@@ -27,10 +27,10 @@
 `PROJECT_NAME` is cut up into various packages and services detailed below:
 
 ### Packages
-- `@service-monorepo-template/template-lib` - Description of package
+- `@docker-monorepo-template/template-lib` - Description of package
 
 ### Services
-- `@service-monorepo-template/api` - Description of API service
+- `@docker-monorepo-template/api` - Description of API service
 
 ## Contributing
 We make use of [`PNPM`](https://pnpm.js.org/) to manage our monorepo setup. It is expected that you have an up-to-date version of it. 
@@ -45,4 +45,4 @@ If all checks out, [Submit a Pull Request](https://github.com/zaida04/service-mo
 
 © 2020, [Zaida04](https://github.com/zaida04). All rights reserved.
 
-> service-monorepo-template is licensed under the [MIT](https://github.com/zaida04/service-monorepo-template/blob/master/LICENSE) license
+> docker-monorepo-template is licensed under the [MIT](https://github.com/zaida04/docker-monorepo-template/blob/master/LICENSE) license
